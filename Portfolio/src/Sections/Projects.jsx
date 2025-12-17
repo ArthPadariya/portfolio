@@ -2,17 +2,17 @@ import React, { useState, useContext } from "react";
 import { FaCode, FaEye } from "react-icons/fa";
 import { motion } from "framer-motion";
 import projectsData from "../data/projectsData";
-import ThemeContext from "../Components/ThemeContext"; // Import ThemeContext
+import ThemeContext from "../Components/ThemeContext";
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("Websites");
-  const { theme } = useContext(ThemeContext); // Access theme context
+  const { theme } = useContext(ThemeContext);
 
-  // Animation variants for fade-in-up effect
+  // Animation variants
   const variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 40 }, // Disappear when out of view
+    exit: { opacity: 0, y: 40 },
   };
 
   return (
@@ -22,8 +22,8 @@ const Projects = () => {
         theme === "dark" ? "text-white" : "text-black"
       }`}
     >
+      {/* Section Title */}
       <div className="mb-8 text-left">
-        {/* Fade in up for title */}
         <motion.h2
           initial="hidden"
           whileInView="visible"
@@ -35,6 +35,7 @@ const Projects = () => {
         >
           Projects
         </motion.h2>
+
         <motion.hr
           initial="hidden"
           whileInView="visible"
@@ -48,7 +49,7 @@ const Projects = () => {
         />
       </div>
 
-      {/* Categories Navbar */}
+      {/* Categories */}
       <div className="flex justify-center items-center mb-8 inter">
         <div
           className={`flex w-[90%] rounded-2xl shadow-lg p-3 space-x-8 justify-evenly overflow-x-auto ${
@@ -61,16 +62,13 @@ const Projects = () => {
             <div
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`flex flex-col items-center cursor-pointer transition-all duration-300
-                ${
-                  activeCategory === category
-                    ? "bg-blue-800 text-white p-3 md:rounded-full rounded-2xl"
-                    : `${
-                        theme === "dark"
-                          ? "text-white hover:text-gray-400"
-                          : "text-black hover:text-gray-600"
-                      }`
-                }`}
+              className={`flex flex-col items-center cursor-pointer transition-all duration-300 ${
+                activeCategory === category
+                  ? "bg-blue-800 text-white p-3 md:rounded-full rounded-2xl"
+                  : theme === "dark"
+                  ? "text-white hover:text-gray-400"
+                  : "text-black hover:text-gray-600"
+              }`}
             >
               <span className="md:text-lg text-sm font-semibold">
                 {category}
@@ -80,9 +78,9 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Projects Grid with In-View Animation */}
+      {/* Projects Grid */}
       <motion.div
-        key={activeCategory} // Forces re-render & animation restart
+        key={activeCategory}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 montserrat"
       >
         {projectsData[activeCategory].map((project, index) => (
@@ -93,46 +91,52 @@ const Projects = () => {
             exit="exit"
             variants={variants}
             transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-            viewport={{ once: false, amount: 0.1 }} // Trigger when 30% in view
+            viewport={{ once: false, amount: 0.1 }}
             className={`border ${
               theme === "dark"
                 ? "border-gray-700 shadow-white shadow-md"
                 : "border-gray-300 shadow-black shadow-md"
             } rounded-lg overflow-hidden`}
           >
-            {/* Image with Hover Effect */}
+            {/* Project Image */}
             <div className="relative group">
               <img
-                src={project.image}
+                src={project.image || "/placeholder.png"}
                 alt={project.title}
                 className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div
-                className="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex items-center 
-                  justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <a
-                  href={project.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white text-2xl hover:text-gray-300"
-                >
-                  <FaCode />
-                </a>
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white text-2xl hover:text-gray-300"
-                >
-                  <FaEye />
-                </a>
+
+              {/* Hover Icons */}
+              <div className="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {project.codeLink && (
+                  <a
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white text-2xl hover:text-gray-300"
+                  >
+                    <FaCode />
+                  </a>
+                )}
+
+                {project.demoLink && (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white text-2xl hover:text-gray-300"
+                  >
+                    <FaEye />
+                  </a>
+                )}
               </div>
             </div>
 
             {/* Project Details */}
             <div
-              className={`p-4 ${theme === "dark" ? "text-white" : "text-black"}`}
+              className={`p-4 ${
+                theme === "dark" ? "text-white" : "text-black"
+              }`}
             >
               <h4 className="text-xl font-semibold">{project.title}</h4>
               <p

@@ -91,30 +91,29 @@ const AboutMe = () => {
         >
           <div className="mt-2 md:space-y-2 montserrat">
             <p>
-              <strong className="inter">Name:</strong> Jeet Mistry
+              <strong className="inter">Name:</strong> Arth Padariya
             </p>
             <p>
-              <strong className="inter">Email:</strong> jeetmistry115@gmail.com
-            </p>
-            <p>
-              <strong className="inter">Phone No:</strong> +91 97379 46657
+              <strong className="inter">Email:</strong> padariyaarth@gmail.com
             </p>
             <br />
           </div>
 
           <p className="mt-4 text-justify montserrat">
-            I am an enthusiastic full-stack developer, passionate about learning
-            and growing in the field of web development, with a particular focus
-            on MERN stack technologies. Specializing in ReactJS, I have built
-            numerous projects and websites, constantly improving my skills and
-            expanding my knowledge. I'm now ready to take on new challenges and
-            start freelancing, offering creative and efficient solutions to
-            bring innovative ideas to life.
+            I am a passionate Frontend and Web Developer with a strong interest in
+  building responsive and user-friendly web applications. I have hands-on
+  experience with HTML, CSS, JavaScript, Bootstrap, and basic backend
+  technologies. In addition to web development, I have experience using
+  Android Studio with Java, Kotlin, and XML for building and understanding
+  Android applications. I have also worked on an IoT-based project, which
+  enhanced my problem-solving and logical thinking skills. I am eager to
+  learn, grow, and contribute to real-world projects while continuously
+  improving my technical abilities.
           </p>
 
           {/* Action Buttons */}
           <div className="flex space-x-4 mt-6">
-            <a href="/JEETMISTRY.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/ARTH_PADARIYA_RESUME.pdf" target="_blank" rel="noopener noreferrer">
               <button
                 className={`px-6 py-2 rounded-md text-lg font-semibold ${
                   theme === "dark"

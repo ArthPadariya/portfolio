@@ -1,73 +1,23 @@
 const certificatesData = {
   Courses: [
     {
-      title: "C for Beginners",
-      institution: "Great Learning",
+      title: "COMPUTER NETWORK AND INTERNET PROTOCOL",
+      institution: "NPTEL",
     },
-    {
-      title: "Programming Basics",
-      institution: "Great Learning",
-    },
-    {
-      title: "Data Structures in C",
-      institution: "Great Learning",
-    },
-    {
-      title: "Java Programming",
-      institution: "Great Learning",
-    },
-    {
-      title: "Object-Oriented Programming with Java",
-      institution: "Great Learning",
-    },
-    {
-      title: "Python Fundamentals",
-      institution: "Great Learning",
-    },
-    {
-      title: "Database and SQL",
-      institution: "Infosys",
-    },
+    
   ],
-  WebDevelopment: [
+  Internship: [
     {
-      title: "API Fundamentals",
-      institution: "Postman",
-    },
-    {
-      title: "HTML Attributes and Tags",
-      institution: "Great Learning",
-    },
-    {
-      title: "Master Certificate in Full Stack Development",
-      institution: "Great Learning",
-    },
-    {
-      title: "Front End Development - CSS",
-      institution: "Great Learning",
-    },
-    {
-      title: "Front End Development - HTML",
-      institution: "Great Learning",
+      title: ".NET language ",
+      institution: "S.M Soni InfoSoft"
     },
   ],
   Workshops: [
     {
-      title: "Workshop in Cyber Security",
-      institution: "ST7 Surveillance Solution",
+      title: "HACKATHON 2.0",
+      institution: "PARUL UNIVERSITY",
     },
-    {
-      title: "Computer Networks and Internet Protocol",
-      institution: "NPTEL",
-    },
-    {
-      title: "A Masterclass for JavaScript",
-      institution: "Parul University",
-    },
-    {
-      title: "Web Application Development with Advanced CRUD Operations",
-      institution: "Parul University",
-    },
+    
   ],
 };
 

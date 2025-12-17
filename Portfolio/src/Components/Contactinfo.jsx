@@ -60,12 +60,11 @@ const ContactInfo = () => {
 
       <div className="flex space-x-6 text-2xl">
         {[
-          { href: "https://linkedin.com/in/jeet-mistry-67a613233", icon: <FaLinkedin />, color: theme === "dark" ? "text-blue-400" : "text-blue-500" },
-          { href: "https://github.com/Jeet-115", icon: <FaGithub />, color: theme === "dark" ? "text-gray-400" : "text-gray-800" },
-          { href: "https://x.com/@Jeet43959691", icon: <img src="/twitter.png" alt="Twitter X" className="h-[1em] w-[1em]" />, color: "" },
-          { href: "mailto:jeetmistry115@gmail.com", icon: <FaEnvelope />, color: theme === "dark" ? "text-red-400" : "text-red-500" },
-          { href: "https://www.instagram.com/jeet_.115/", icon: <FaInstagram />, color: "text-pink-500" },
-          { href: "https://facebook.com/jeet.mistry.7543/", icon: <FaFacebook />, color: "text-blue-600" },
+          { href: "http://linkedin.com/in/arth-padariya-5949a9272", icon: <FaLinkedin />, color: theme === "dark" ? "text-blue-400" : "text-blue-500" },
+          { href: "https://github.com/ArthPadariya", icon: <FaGithub />, color: theme === "dark" ? "text-gray-400" : "text-gray-800" },
+          { href: "mailto:padariyaarth@gmail.com", icon: <FaEnvelope />, color: theme === "dark" ? "text-red-400" : "text-red-500" },
+          { href: "https://www.instagram.com/arth1045?igsh=dDFxOGR2OWE5aG1h&utm_source=qr", icon: <FaInstagram />, color: "text-pink-500" },
+          
         ].map((link, index) => (
           <motion.a
             key={index}
